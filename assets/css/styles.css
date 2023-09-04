@@ -9,6 +9,7 @@
   --ff-primary: Montserrat;
   --ff-secondary: VT323;
   --fc-primary: white;
+  --fc-secondary: rgb(62, 62, 62);
   --fs-h1: 2.5rem;
   --fs-h2: 1.5rem;
   --fs-h3: 1rem;
@@ -161,7 +162,7 @@ main {
   font-family: var(--ff-primary);
   margin: 0 3rem;
   margin-top: 20rem;
-  margin-bottom: 20rem;
+  margin-bottom: 10rem;
 }
 
 .greet_title {
@@ -178,40 +179,170 @@ main {
 }
 
 
+#project {
+  visibility: hidden;
+}
+
 
 /*Project Section*/
 .projects {
-  display: block;
-  margin-top: 10rem;
-  margin-bottom: 20rem;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10rem;
+  row-gap: 9rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
   font-family: var(--ff-primary);
   margin-left: 3rem;
   margin-right: 3rem;
+  justify-content: space-evenly;
 }
 
-.maintenance-img {
+
+/*Items Section*/
+.items {
+  display: flex;
+  width: 22rem;
+  height: 27rem;
+  border-radius: 16px;
+  -webkit-transition: background 0.3s ease-out;
+  -moz-transition: background 0.3s ease-out;
+  -o-transition: background 0.3s ease-out;
+  transition: background 0.3s ease-out;
+}
+
+.items:hover {
+  background: rgba(131, 38, 224, 0.76);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.4px);
+  -webkit-backdrop-filter: blur(9.4px);
+}
+
+.items a {
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--fc-primary);
+}
+
+.items a img {
   display: block;
-  margin: 3rem auto;
+  margin: auto;
+  border-radius: 6px;
+  object-fit: contain;
+  width: 100%;
 }
 
-.maintenance_desc span {
+.items a h2 {
+  margin-top: 1rem;
+  font-size: var(--fs-h1min);
+  color: var(--fc-primary);
+  
+}
+
+.items a h3 {
+  color: var(--fc-primary);
+}
+
+.items a ul {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 0.5rem;
+  margin-top: 1rem;
+  font-size: var(--fs-h2min);
+  justify-content: space-evenly;
+}
+
+#skills {
+  visibility: hidden;
+}
+/*Skill Section*/
+.skills {
+  font-family: var(--ff-primary);
+  margin-top: 9rem;
+  margin-bottom: 5rem;
+}
+
+.skills_title {
+  font-size: var(--fs-h1);
   color: #FF4949;
+  letter-spacing: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.item1 {grid-area: item1;}
+.item2 {grid-area: item2;}
+.item3 {grid-area: item3;}
+.item4 {grid-area: item4;}
+.item5 {grid-area: item5;}
+.item6 {grid-area: item6;}
+.item7 {grid-area: item7;}
+.item8 {grid-area: item8;}
+.item9 {grid-area: item9;}
+.item10 {grid-area: item10;}
+.item11 {grid-area: item11;}
+.item12 {grid-area: item12;}
+.item13 {grid-area: item13;}
+.item14 {grid-area: item14;}
+.item15 {grid-area: item15;}
+.item16 {grid-area: item16;}
+
+.skills_grid {
+  display: grid;
+  grid-template-areas: 
+    "item1 item2 item3 item4"
+    "item5 item6 item7 item8"
+    "item9 item10 item11 item12"
+    "item13 item14 item15 item16"
+  ;
+}
+
+.skills_grid p {
+  font-size: var(--fs-h2);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+
+#aboutme {
+  visibility: hidden;
+}
+/* About Section */
+.about {
+  font-family: var(--ff-primary);
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.about_title {
+  font-size: var(--fs-h1);
+  color: #FF4949;
+  letter-spacing: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.about ul a {
+  text-decoration: none;
+}
+
+.about ul {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5rem;
+}
+
+.about ul p {
+  font-size: var(--fs-h2);
   font-weight: bold;
 }
 
-.maintenance_desc {
-  margin-top: 3rem;
-  text-align: center;
-  font-size: var(--fs-h2);
+.about ul p span {
+  letter-spacing: 0.4rem;
 }
 
-
-
-/*Skill Section*/
-.skills {
-
+.about ul a i {
+  font-size: 4rem;
 }
-
 
 
 /*MEDIA QUERIES*/
